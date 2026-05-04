@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+/* fonts*/
+@font-face {
+  font-family: "Flame";
+  src: url("../Burger%20King%20Flame/Flame-Regular.otf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Flame";
+  src: url("../Burger%20King%20Flame/Flame-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../sf-pro-display/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  font-weight: normal;
+}
+/* fin des fonts*/
+body {
+  margin: 90px;
+}
+header {
+  display: flex;
+  max-width: 1200px;
+  padding: 60px;
+  margin: auto;
+  flex-direction: column;
+  border-radius: 24px;
+  background: #502314;
+}
+h1 {
+  color: #f4ebdc;
+  font-family: Flame;
+  font-size: 120px;
+}
+
+.contest {
+  color: #fbba00;
+  font-family: Flame;
+  font-size: 96px;
+}
+
+p {
+  font-family: "SF Pro Display";
+  color: #f4ebdc;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  max-width: 1200px;
+  padding: 60px;
+  margin: auto;
+  flex-direction: column;
+  border-radius: 24px;
+}
+.title {
+  color: #d72300;
+  font-family: Flame;
+  font-size: 72px;
+  width: 1200px;
+  background-color: #ff8732;
+  padding: 75px 107px;
+  margin: auto;
+}
