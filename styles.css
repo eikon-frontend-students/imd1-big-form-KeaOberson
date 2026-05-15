@@ -208,11 +208,18 @@ input:focus {
 .submit-btn {
   background: var(--red);
   color: var(--cream);
+  box-shadow: var(--shadow);
   font-family: Flame;
   border-radius: 63px;
   font-size: 40px;
+
   width: fit-content;
+  height: 100px;
   margin: 40px auto;
+
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
 
 footer {
