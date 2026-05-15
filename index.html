@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire Concours Burger</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Custom Burger <span class="contest">Contest 2026</span></h1>
+        <p>
+          Burger King lance un concours de création de burgers invitant les
+          participants à imaginer et composer leur propre recette ! L’objectif
+          est de proposer une création originale, équilibrée ou audacieuse, qui
+          pourra être étudiée par un jury interne et éventuellement intégrée à
+          une future offre en restaurant. Ce formulaire permet de soumettre sa
+          proposition en détaillant chaque élément du burger, de la base aux
+          garnitures, afin de concevoir une recette unique et personnalisée.
+          Bonne chance !
+        </p>
+      </header>
+
+      <form action="https://formsubmit.co/kea.oberson@studentfr.ch">
+        <h2 class="title">Crée le burger de tes rêves</h2>
+        <h3>Customise ton Burger</h3>
+
+        <!-- ========================= -->
+        <!-- QUESTION 1 : PAIN -->
+        <!-- ========================= -->
+        <div class="question">
+          <p class="question-title">1. Choisis le pain</p>
+
+          <div class="bread-options">
+            <div class="bread-item">
+              <input
+                id="pain-classique"
+                name="pain"
+                type="radio"
+                value="classique"
+              />
+              <label for="pain-classique">
+                <img
+                  src="images/pain-classique.jpg"
+                  alt="Pain classique sésame"
+                />
+                <span>Classique sésame</span>
+              </label>
+            </div>
+
+            <div class="bread-item">
+              <input
+                id="pain-brioche"
+                name="pain"
+                type="radio"
+                value="brioche"
+              />
+              <label for="pain-brioche">
+                <img src="images/pain-brioche.jpg" alt="Pain brioché" />
+                <span>Pain brioché</span>
+              </label>
+            </div>
+
+            <div class="bread-item">
+              <input id="pain-levain" name="pain" type="radio" value="levain" />
+              <label for="pain-levain">
+                <img src="images/pain-levain.jpg" alt="Pain au levain" />
+                <span>Pain au levain</span>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- QUESTION 2 : VIANDE -->
+        <!-- ========================= -->
+        <div class="question">
+          <p class="question-title">2. Choisis la viande</p>
+
+          <div class="radio-group">
+            <input id="viande-boeuf" name="viande" type="radio" value="boeuf" />
+            <label for="viande-boeuf">Boeuf</label>
+
+            <input
+              id="viande-poulet-crispe"
+              name="viande"
+              type="radio"
+              value="poulet-crispe"
+            />
+            <label for="viande-poulet-crispe">Poulet crispé</label>
+
+            <input
+              id="viande-poulet-grille"
+              name="viande"
+              type="radio"
+              value="poulet-grille"
+            />
+            <label for="viande-poulet-grille">Poulet grillé</label>
+
+            <input
+              id="viande-vegetarien"
+              name="viande"
+              type="radio"
+              value="vegetarien"
+            />
+            <label for="viande-vegetarien">Steak végétarien</label>
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- QUESTION 3 : STEAKS -->
+        <!-- ========================= -->
+        <div class="question">
+          <p class="question-title">3. Combien de steaks veux-tu ?</p>
+
+          <input
+            id="steaks"
+            name="steaks"
+            type="range"
+            min="1"
+            max="4"
+            step="1"
+          />
+
+          <div class="range-labels">
+            <span>1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- QUESTION 4 : SAUCES -->
+        <!-- ========================= -->
+        <div class="question">
+          <p class="question-title">4. Choisis la sauce (une ou plusieurs)</p>
+
+          <div class="checkbox-group">
+            <input
+              id="sauce-ketchup"
+              type="checkbox"
+              name="sauces"
+              value="ketchup"
+            />
+            <label for="sauce-ketchup">Ketchup</label>
+
+            <input id="sauce-mayo" type="checkbox" name="sauces" value="mayo" />
+            <label for="sauce-mayo">Mayonnaise</label>
+
+            <input
+              id="sauce-moutarde"
+              type="checkbox"
+              name="sauces"
+              value="moutarde"
+            />
+            <label for="sauce-moutarde">Moutarde</label>
+
+            <input id="sauce-bbq" type="checkbox" name="sauces" value="bbq" />
+            <label for="sauce-bbq">BBQ</label>
+
+            <input
+              id="sauce-curry"
+              type="checkbox"
+              name="sauces"
+              value="curry"
+            />
+            <label for="sauce-curry">Curry</label>
+
+            <input
+              id="sauce-truffe"
+              type="checkbox"
+              name="sauces"
+              value="truffe"
+            />
+            <label for="sauce-truffe">Truffe</label>
+
+            <input id="sauce-ail" type="checkbox" name="sauces" value="ail" />
+            <label for="sauce-ail">Ail</label>
+
+            <input
+              id="sauce-aigre-douce"
+              type="checkbox"
+              name="sauces"
+              value="aigre-douce"
+            />
+            <label for="sauce-aigre-douce">Aigre douce</label>
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- QUESTION 5 : GARNITURES -->
+        <!-- ========================= -->
+        <div class="question">
+          <p class="question-title">5. Choisis tes garnitures</p>
+
+          <div class="checkbox-group">
+            <input
+              id="garniture-salade"
+              type="checkbox"
+              name="garnitures"
+              value="salade"
+            />
+            <label for="garniture-salade">Salade</label>
+
+            <input
+              id="garniture-cornichons"
+              type="checkbox"
+              name="garnitures"
+              value="cornichons"
+            />
+            <label for="garniture-cornichons">Cornichons</label>
+
+            <input
+              id="garniture-oignons"
+              type="checkbox"
+              name="garnitures"
+              value="oignons"
+            />
+            <label for="garniture-oignons">Oignons</label>
+
+            <input
+              id="garniture-bacon"
+              type="checkbox"
+              name="garnitures"
+              value="bacon"
+            />
+            <label for="garniture-bacon">Bacon</label>
+
+            <input
+              id="garniture-oeuf"
+              type="checkbox"
+              name="garnitures"
+              value="oeuf-au-plat"
+            />
+            <label for="garniture-oeuf">Œuf au plat</label>
+
+            <input
+              id="garniture-avocat"
+              type="checkbox"
+              name="garnitures"
+              value="avocat"
+            />
+            <label for="garniture-avocat">Avocat</label>
+
+            <input
+              id="garniture-roquette"
+              type="checkbox"
+              name="garnitures"
+              value="roquette"
+            />
+            <label for="garniture-roquette">Roquette</label>
+
+            <input
+              id="garniture-oignons-caramelises"
+              type="checkbox"
+              name="garnitures"
+              value="oignons-caramelises"
+            />
+            <label for="garniture-oignons-caramelises"
+              >Oignons caramélisés</label
+            >
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- QUESTION 6 : FROMAGE -->
+        <!-- ========================= -->
+        <div class="question">
+          <p class="question-title">6. Choisis ton fromage</p>
+
+          <div class="radio-group">
+            <input
+              id="fromage-cheddar"
+              type="radio"
+              name="fromage"
+              value="cheddar"
+            />
+            <label for="fromage-cheddar">Cheddar</label>
+
+            <input
+              id="fromage-gruyere"
+              type="radio"
+              name="fromage"
+              value="gruyere"
+            />
+            <label for="fromage-gruyere">Gruyère</label>
+
+            <input
+              id="fromage-appenzeller"
+              type="radio"
+              name="fromage"
+              value="appenzeller"
+            />
+            <label for="fromage-appenzeller">Appenzeller</label>
+
+            <input
+              id="fromage-mozzarella"
+              type="radio"
+              name="fromage"
+              value="mozzarella"
+            />
+            <label for="fromage-mozzarella">Mozzarella</label>
+          </div>
+        </div>
+
+        <!-- ========================= -->
+        <!-- QUESTION 7 : INGREDIENT LIBRE -->
+        <!-- ========================= -->
+        <div class="question">
+          <label for="ingredient-libre">
+            7. Souhaites-tu un ingrédient qui n'est pas dans la liste ?</label
+          >
+          <input
+            id="ingredient-libre"
+            name="ingredient-libre"
+            type="text"
+            placeholder="Ex : jalapeños, sauce spéciale..."
+          />
+        </div>
+
+        <!-- ========================= -->
+        <!-- QUESTION 8 : NOM DU BURGER -->
+        <!-- ========================= -->
+        <div class="question">
+          <label for="nom-burger" class="question-title"
+            >8. Nomme ton burger</label
+          >
+          <input
+            id="nom-burger"
+            name="nom-burger"
+            type="text"
+            placeholder="Ex : The Fire Burger"
+          />
+        </div>
+
+        <h3>Informations personnelles</h3>
+        <div class="question">
+          <label for="nom" class="question-title">Nom et Prénom </label>
+          <input id="nom" type="text" name="nom prénom" />
+          <label for="mail" class="question-title">Adresse Email</label>
+          <input id="mail" type="email" name="mail" />
+          <label for="adresse" class="question-title">Adresse</label>
+          <input id="adresse" type="text" name="adresse" />
+        </div>
+      </form>
+
+      <footer>
+        <svg
+          class="burger"
+          xmlns="http://www.w3.org/2000/svg"
+          width="96"
+          height="96"
+          viewBox="0 0 96 96"
+          fill="none"
+        >
+          <path
+            d="M18.0263 36C17.5751 36.0044 17.1287 35.9069 16.7204 35.7148C16.3122 35.5228 15.9525 35.2411 15.6681 34.8908C15.3837 34.5405 15.1821 34.1306 15.0781 33.6915C14.9741 33.2525 14.9705 32.7956 15.0675 32.355C17.505 20.8312 31.32 12 48 12C64.68 12 78.495 20.8312 80.9325 32.355C81.0295 32.7956 81.0259 33.2525 80.9219 33.6915C80.8179 34.1306 80.6163 34.5405 80.3319 34.8908C80.0476 35.2411 79.6878 35.5228 79.2796 35.7148C78.8713 35.9069 78.4249 36.0044 77.9738 36H18.0263Z"
+            stroke="#FBBA00"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M9 66L25.5 60L40.5 66L55.5 60L70.5 66L87 60"
+            stroke="#FBBA00"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M9 48H87"
+            stroke="#FBBA00"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M78 63.2736V68.9998C78 72.1824 76.7357 75.2347 74.4853 77.4851C72.2348 79.7355 69.1826 80.9998 66 80.9998H30C26.8174 80.9998 23.7652 79.7355 21.5147 77.4851C19.2643 75.2347 18 72.1824 18 68.9998V62.7261"
+            stroke="#FBBA00"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <h2>
+          N'hésite pas à partager ton idée de burger sur les réseaux sociaux
+          avec le #CustomBurgerContest.
+        </h2>
+        <div class="links">
+          <p>Conditions du concours</p>
+          <p>Politique de confidentialité</p>
+          <p>@ 2026 Burger King</p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
