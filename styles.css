@@ -205,6 +205,16 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(255, 135, 50, 0.2);
 }
 
+.submit-btn {
+  background: var(--red);
+  color: var(--cream);
+  font-family: Flame;
+  border-radius: 63px;
+  font-size: 40px;
+  width: fit-content;
+  margin: 40px auto;
+}
+
 footer {
   display: flex;
   padding: 60px;

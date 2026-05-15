@@ -22,7 +22,13 @@
         </p>
       </header>
 
-      <form action="https://formsubmit.co/kea.oberson@studentfr.ch">
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input
+          type="hidden"
+          name="access_key"
+          value="4a7941cb-597e-4ca1-8ceb-f2c3e4cff11b"
+        />
+        <input type="hidden" name="redirect" value="success.html" />
         <h2 class="title">Crée le burger de tes rêves</h2>
         <h3>Customise ton Burger</h3>
 
@@ -344,6 +350,9 @@
           <label for="adresse" class="question-title">Adresse</label>
           <input id="adresse" type="text" name="adresse" />
         </div>
+        <button type="submit" class="submit-btn">
+          Envoyer ma participation
+        </button>
       </form>
 
       <footer>
