@@ -22,13 +22,12 @@
         </p>
       </header>
 
-      <form action="https://api.web3forms.com/submit" method="POST">
+      <form id="burger-form" action="https://api.web3forms.com/submit" method="POST">
         <input
           type="hidden"
           name="access_key"
           value="4a7941cb-597e-4ca1-8ceb-f2c3e4cff11b"
         />
-        <input type="hidden" name="redirect" value="success.html" />
         <h2 class="title">Crée le burger de tes rêves</h2>
         <h3>Customise ton Burger</h3>
 
@@ -356,6 +355,9 @@
       </form>
 
       <footer>
+        <!-- ========================= -->
+        <!-- SVG ICONE DU BURGER -->
+        <!-- ========================= -->
         <svg
           class="burger"
           xmlns="http://www.w3.org/2000/svg"
@@ -397,12 +399,16 @@
           N'hésite pas à partager ton idée de burger sur les réseaux sociaux
           avec le #CustomBurgerContest.
         </h2>
+
         <div class="links">
+          <!-- liens ne marchent pas-->
           <p>Conditions du concours</p>
           <p>Politique de confidentialité</p>
           <p>@ 2026 Burger King</p>
         </div>
       </footer>
     </div>
+    <script src="script.js"></script>
+    </script>
   </body>
 </html>
