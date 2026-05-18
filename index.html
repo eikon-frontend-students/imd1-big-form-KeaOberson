@@ -22,12 +22,22 @@
         </p>
       </header>
 
-      <form id="burger-form" action="https://api.web3forms.com/submit" method="POST">
+      <form
+        id="burger-form"
+        action="https://api.web3forms.com/submit"
+        method="POST"
+      >
         <input
           type="hidden"
           name="access_key"
           value="4a7941cb-597e-4ca1-8ceb-f2c3e4cff11b"
         />
+        <input
+          type="hidden"
+          name="redirect"
+          value="http://127.0.0.1:5500/success.html"
+        />
+        <!-- NE PAS OUBLIER DE CHANGER ET METTRE L'ADRESSE ALWAYSDATA-->
         <h2 class="title">Crée le burger de tes rêves</h2>
         <h3>Customise ton Burger</h3>
 
@@ -36,20 +46,25 @@
         <!-- ========================= -->
         <div class="question">
           <p class="question-title">1. Choisis le pain</p>
-
           <div class="bread-options">
             <div class="bread-item">
-              <input
-                id="pain-classique"
-                name="pain"
-                type="radio"
-                value="classique"
-              />
+              <!-- div avec l'image, le bouton et le nom du pain-->
+
               <label for="pain-classique">
-                <img
-                  src="images/pain-classique.jpg"
-                  alt="Pain classique sésame"
+                <input
+                  id="pain-classique"
+                  name="pain"
+                  type="radio"
+                  value="classique"
                 />
+                <!-- bread box = pour que ca soit que l'image qui s'entoure et que le titre soit en dessous-->
+                <div class="bread-box">
+                  <img
+                    src="images/pain_burger_sesame_carre.png"
+                    alt="Pain classique sésame"
+                  />
+                </div>
+
                 <span>Classique sésame</span>
               </label>
             </div>
@@ -62,7 +77,13 @@
                 value="brioche"
               />
               <label for="pain-brioche">
-                <img src="images/pain-brioche.jpg" alt="Pain brioché" />
+                <div class="bread-box">
+                  <img
+                    src="images/pain_burger_brioche_carre.png"
+                    alt="Pain brioché"
+                  />
+                </div>
+
                 <span>Pain brioché</span>
               </label>
             </div>
@@ -70,7 +91,13 @@
             <div class="bread-item">
               <input id="pain-levain" name="pain" type="radio" value="levain" />
               <label for="pain-levain">
-                <img src="images/pain-levain.jpg" alt="Pain au levain" />
+                <div class="bread-box">
+                  <img
+                    src="images/pain_burger_levain_carre.png"
+                    alt="Pain au levain"
+                  />
+                </div>
+
                 <span>Pain au levain</span>
               </label>
             </div>
@@ -93,7 +120,7 @@
               type="radio"
               value="poulet-crispe"
             />
-            <label for="viande-poulet-crispe">Poulet crispé</label>
+            <label for="viande-poulet-crispe">Poulet crispy</label>
 
             <input
               id="viande-poulet-grille"
@@ -409,6 +436,5 @@
       </footer>
     </div>
     <script src="script.js"></script>
-    </script>
   </body>
 </html>
