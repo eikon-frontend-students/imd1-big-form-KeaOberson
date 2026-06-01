@@ -49,17 +49,16 @@
         <div class="question">
           <p class="question-title">1. Choisis le pain</p>
           <div class="bread-options">
-            <!-- Chaque option = un "bloc pain" -->
+            <!-- Chaque option = un "bloc pain". la div bread option regroupe les 3 options -->
             <div class="bread-item">
-              <!-- div avec l'image, le bouton et le nom du pain-->
-
+              <!-- div avec l'image, le bouton qu'on ne voit pas et le nom du pain-->
+              <input
+                id="pain-classique"
+                name="pain"
+                type="radio"
+                value="classique"
+              />
               <label for="pain-classique">
-                <input
-                  id="pain-classique"
-                  name="pain"
-                  type="radio"
-                  value="classique"
-                />
                 <!-- bread box = pour que ca soit que l'image qui s'entoure et que le titre soit en dessous-->
                 <div class="bread-box">
                   <img
@@ -174,7 +173,7 @@
 
           <div class="checkbox-group">
             <!-- groupe avec toutes les sauces-->
-            <label class="checkbox-item">
+            <label for="sauce-ketchup" class="checkbox-item">
               <!--une sauce-->
               <input
                 id="sauce-ketchup"
@@ -185,7 +184,7 @@
               Ketchup
             </label>
 
-            <label class="checkbox-item">
+            <label for="sauce-mayo" class="checkbox-item">
               <input
                 id="sauce-mayo"
                 type="checkbox"
@@ -195,7 +194,7 @@
               Mayonnaise
             </label>
 
-            <label class="checkbox-item">
+            <label for="sauce-moutarde" class="checkbox-item">
               <input
                 id="sauce-moutarde"
                 type="checkbox"
@@ -205,12 +204,12 @@
               Moutarde
             </label>
 
-            <label class="checkbox-item">
+            <label for="sauce-bbq" class="checkbox-item">
               <input id="sauce-bbq" type="checkbox" name="sauces" value="bbq" />
               BBQ
             </label>
 
-            <label class="checkbox-item">
+            <label for="sauce-curry" class="checkbox-item">
               <input
                 id="sauce-curry"
                 type="checkbox"
@@ -220,7 +219,7 @@
               Curry
             </label>
 
-            <label class="checkbox-item">
+            <label for="sauce-truffe" class="checkbox-item">
               <input
                 id="sauce-truffe"
                 type="checkbox"
@@ -230,12 +229,12 @@
               Truffe
             </label>
 
-            <label class="checkbox-item">
+            <label for="sauce-ail" class="checkbox-item">
               <input id="sauce-ail" type="checkbox" name="sauces" value="ail" />
               Ail
             </label>
 
-            <label class="checkbox-item">
+            <label for="sauce-aigre-douce" class="checkbox-item">
               <input
                 id="sauce-aigre-douce"
                 type="checkbox"
@@ -254,7 +253,7 @@
           <p class="question-title">5. Choisis tes garnitures</p>
 
           <div class="checkbox-group">
-            <label class="checkbox-item">
+            <label for="garniture-salade" class="checkbox-item">
               <input
                 id="garniture-salade"
                 type="checkbox"
@@ -264,7 +263,7 @@
               Salade
             </label>
 
-            <label class="checkbox-item">
+            <label for="garniture-cornichons" class="checkbox-item">
               <input
                 id="garniture-cornichons"
                 type="checkbox"
@@ -274,7 +273,7 @@
               Cornichons
             </label>
 
-            <label class="checkbox-item">
+            <label for="garniture-oignons" class="checkbox-item">
               <input
                 id="garniture-oignons"
                 type="checkbox"
@@ -284,7 +283,7 @@
               Oignons
             </label>
 
-            <label class="checkbox-item">
+            <label for="garniture-bacon" class="checkbox-item">
               <input
                 id="garniture-bacon"
                 type="checkbox"
@@ -294,7 +293,7 @@
               Bacon
             </label>
 
-            <label class="checkbox-item">
+            <label for="garniture-oeuf" class="checkbox-item">
               <input
                 id="garniture-oeuf"
                 type="checkbox"
@@ -304,7 +303,7 @@
               Œuf au plat
             </label>
 
-            <label class="checkbox-item">
+            <label for="garniture-avocat" class="checkbox-item">
               <input
                 id="garniture-avocat"
                 type="checkbox"
@@ -314,7 +313,7 @@
               Avocat
             </label>
 
-            <label class="checkbox-item">
+            <label for="garniture-roquette" class="checkbox-item">
               <input
                 id="garniture-roquette"
                 type="checkbox"
@@ -324,7 +323,7 @@
               Roquette
             </label>
 
-            <label class="checkbox-item">
+            <label for="garniture-oignons-caramelises" class="checkbox-item">
               <input
                 id="garniture-oignons-caramelises"
                 type="checkbox"
@@ -343,37 +342,41 @@
           <p class="question-title">6. Choisis ton fromage</p>
 
           <div class="radio-group">
-            <input
-              id="fromage-cheddar"
-              type="radio"
-              name="fromage"
-              value="cheddar"
-            />
-            <label for="fromage-cheddar">Cheddar</label>
+            <label for="fromage-cheddar">
+              <input
+                id="fromage-cheddar"
+                type="radio"
+                name="fromage"
+                value="cheddar"
+              />Cheddar</label
+            >
 
-            <input
-              id="fromage-gruyere"
-              type="radio"
-              name="fromage"
-              value="gruyere"
-            />
-            <label for="fromage-gruyere">Gruyère</label>
+            <label for="fromage-gruyere">
+              <input
+                id="fromage-gruyere"
+                type="radio"
+                name="fromage"
+                value="gruyere"
+              />Gruyère</label
+            >
 
-            <input
-              id="fromage-appenzeller"
-              type="radio"
-              name="fromage"
-              value="appenzeller"
-            />
-            <label for="fromage-appenzeller">Appenzeller</label>
+            <label for="fromage-appenzeller">
+              <input
+                id="fromage-appenzeller"
+                type="radio"
+                name="fromage"
+                value="appenzeller"
+              />Appenzeller</label
+            >
 
-            <input
-              id="fromage-mozzarella"
-              type="radio"
-              name="fromage"
-              value="mozzarella"
-            />
-            <label for="fromage-mozzarella">Mozzarella</label>
+            <label for="fromage-mozzarella"
+              ><input
+                id="fromage-mozzarella"
+                type="radio"
+                name="fromage"
+                value="mozzarella"
+              />Mozzarella</label
+            >
           </div>
         </div>
 
@@ -404,6 +407,7 @@
             name="nom-burger"
             type="text"
             placeholder="Ex : The Fire Burger"
+            required
           />
         </div>
 
@@ -415,6 +419,7 @@
             type="text"
             name="nom prénom"
             placeholder="Ex : Jean Dupont"
+            required
           />
           <label for="mail" class="question-title">Adresse Email</label>
           <input
@@ -422,6 +427,7 @@
             type="email"
             name="mail"
             placeholder="Ex : jean@mail.com"
+            required
           />
           <label for="adresse" class="question-title">Adresse</label>
           <input
@@ -429,6 +435,7 @@
             type="text"
             name="adresse"
             placeholder="Ex : 12 rue de Lausanne, 1000 Lausanne"
+            required
           />
         </div>
         <button type="submit" class="submit-btn">
@@ -484,9 +491,9 @@
 
         <div class="links">
           <!-- liens ne marchent pas-->
-          <p>Conditions du concours</p>
-          <p>Politique de confidentialité</p>
-          <p>@ 2026 Burger King</p>
+          <a href="#">Conditions du concours</a>
+          <a href="#">Politique de confidentialité</a>
+          <a href="#">@ 2026 Burger King</a>
         </div>
       </footer>
     </div>

@@ -44,10 +44,13 @@ body {
   margin: clamp(1.5rem, 5vw, 5.6rem); /*rend les marges responsives*/
 }
 .container {
+  /* Centre tout le contenu de la page */
   max-width: 1200px;
   margin: auto;
+  /* Centre tout le contenu de la page */
   display: flex;
   flex-direction: column;
+  /* Espace entre les sections */
   gap: clamp(1.5rem, 4vw, 2.5rem);
 }
 /* HEADER */
@@ -96,19 +99,20 @@ form {
   background: var(--orange);
   color: var(--red);
   font-family: Flame;
-  font-size: 72px;
+  font-size: clamp(2rem, 8vw, 6rem);
   padding: 20px;
   text-align: center;
   border-radius: var(--radius) var(--radius) 0 0;
 }
 form > *:not(.title) {
+  /*tout le formulaire mais pas le titre a ce padding là*/
   padding: 0 60px;
 }
 
 h3 {
   color: var(--red);
   font-family: Flame;
-  font-size: 40px;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
 }
 /*QUESTIONS DU FORM*/
 
@@ -128,14 +132,12 @@ h3 {
   display: flex;
   gap: clamp(0.8rem, 2vw, 1.25rem);
   width: 100%;
-}
-
-.radio-group label {
-  flex: 1; /* "prend une part égale de l'espace dispo*/
+  flex-wrap: wrap;
 }
 
 /*ce qui a écrit à coté du bouton radio*/
 .radio-group label {
+  flex: 1; /* "prend une part égale de l'espace dispo*/
   display: flex;
   align-items: center;
   gap: 10px;
@@ -179,6 +181,12 @@ input[type="checkbox"] {
   cursor: pointer;
   transition: 0.2s;
 }
+.bread-item label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
 .bread-box {
   padding: 10px;
   border-radius: 16px;
@@ -186,14 +194,10 @@ input[type="checkbox"] {
   box-shadow: var(--shadow);
 }
 .bread-item:has(input[type="radio"]:checked) .bread-box {
-  outline: 3px solid var(--red); /* ici j'ai utilisé outline pour que ca fasse un contour intérieur et donc pas que ca bouge le layout. outline se dessine par dessus l'objet*/
+  /*"si .bread-item contient un radio coché, alors applique ce style à .bread-box"*/
+  outline: 3px solid var(--red); /* outline se dessine par dessus l'objet sans modifier sa taille donc j'ai mis ça pour pas que ça boueg le layout. */
 }
-.bread-item label {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
+
 .bread-options {
   display: flex;
   justify-content: space-evenly;
@@ -252,11 +256,12 @@ input:focus {
   box-shadow: var(--shadow);
   font-family: Flame;
   border-radius: 63px;
-  font-size: 40px;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  height: clamp(3.5rem, 8vw, 6.25rem);
 
-  width: fit-content;
-  height: 100px;
-  margin: 40px auto;
+  margin: clamp(1.5rem, 4vw, 2.5rem) auto;
+
+  padding: 0 clamp(1.5rem, 3vw, 3rem);
 
   border: none;
   outline: none;
@@ -276,9 +281,7 @@ footer {
 footer h2 {
   color: var(--cream);
   font-family: Flame;
-  color: #f4ebdc;
   text-align: center;
-  font-family: Flame;
   font-weight: 400;
 }
 
@@ -289,7 +292,7 @@ footer h2 {
   flex-wrap: wrap;
 }
 
-.links p {
+a {
   color: var(--yellow);
   font-family: "SF Pro Display";
 }
@@ -306,13 +309,13 @@ footer h2 {
 .merci {
   color: var(--cream);
   font-family: Flame;
-  font-size: 150px;
+  font-size: clamp(2rem, 8vw, 6rem);
   font-weight: 700;
 }
 .success > *:not(.merci) {
   color: var(--yellow);
   font-family: Flame;
-  font-size: 96px;
+  font-size: clamp(2rem, 8vw, 6rem);
   font-weight: 700;
 }
 
