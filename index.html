@@ -10,6 +10,7 @@
     <div class="container">
       <header>
         <h1>Custom Burger <span class="contest">Contest 2026</span></h1>
+        <!-- span permet de modifier une partie du texte sans créer de nonuvelle ligne-->
         <p>
           Burger King lance un concours de création de burgers invitant les
           participants à imaginer et composer leur propre recette ! L’objectif
@@ -47,6 +48,7 @@
         <!-- QUESTION 1 : PAIN -->
         <!-- ========================= -->
         <div class="question">
+          <!--regroupe une question complète du formulaire avec son titre, ses champs de saisies et options-->
           <p class="question-title">1. Choisis le pain</p>
           <div class="bread-options">
             <!-- Chaque option = un "bloc pain". la div bread option regroupe les 3 options -->
@@ -57,7 +59,7 @@
                 name="pain"
                 type="radio"
                 value="classique"
-              />
+              /><!--id permet au label d'être associé avec cet input-->
               <label for="pain-classique">
                 <!-- bread box = pour que ca soit que l'image qui s'entoure et que le titre soit en dessous-->
                 <div class="bread-box">
@@ -67,7 +69,8 @@
                   />
                 </div>
 
-                <span>Classique sésame</span>
+                <span>Classique sésame</span
+                ><!--Le span est placé en dehors de bread-box pour que le CSS puisse mettre une bordure uniquement autour de l'image, tandis que le texte reste en dessous.-->
               </label>
             </div>
 
@@ -491,7 +494,7 @@
         </h2>
 
         <div class="links">
-          <!-- liens ne marchent pas-->
+          <!-- liens ne marchent pas car je n'ai pas fait les autres pages-->
           <a href="#">Conditions du concours</a>
           <a href="#">Politique de confidentialité</a>
           <a href="#">@ 2026 Burger King</a>
