@@ -1,3 +1,4 @@
+/* racine du document. variables seront réutilisables dans tout le fichier.*/
 :root {
   --brown: #502314;
   --cream: #f4ebdc;
@@ -12,12 +13,13 @@
   --radius-input: 30px;
 }
 
-/* RESET */
+/* RESET, pour supprimer marges par défaut du navigateur*/
 * {
   box-sizing: border-box;
   margin: 0;
 }
 
+/* définit taille de base des caractères. les unités rem seront calculé à partir de cette valeur.  */
 html {
   font-size: 16px;
 }
@@ -38,7 +40,7 @@ html {
   src: url("../sf-pro-display/SFPRODISPLAYREGULAR.OTF") format("opentype");
   font-weight: normal;
 }
-/* fin des fonts*/
+
 /* LAYOUT DU CONTAINER */
 body {
   margin: clamp(1.5rem, 5vw, 5.6rem); /*rend les marges responsives*/
@@ -47,7 +49,6 @@ body {
   /* Centre tout le contenu de la page */
   max-width: 1200px;
   margin: auto;
-  /* Centre tout le contenu de la page */
   display: flex;
   flex-direction: column;
   /* Espace entre les sections */
@@ -155,7 +156,7 @@ input[type="radio"] {
   accent-color: var(--red);
   width: 18px;
   height: 18px;
-}
+} /*change couleur des boutons radios à cocher*/
 .checkbox-group {
   display: flex;
   gap: clamp(0.8rem, 2vw, 1.25rem);
@@ -177,21 +178,24 @@ input[type="checkbox"] {
   accent-color: var(--red);
   width: 18px;
   height: 18px;
-}
+} /*change couleur des checkbox*/
 
 /* LAYOUT QUESTION 1 AVEC PAINS ET IMAGES*/
+/* carte de sélection d'un pain */
 .bread-item {
   display: flex;
   flex-direction: column;
   align-items: center;
   transition: 0.2s;
 }
+
 .bread-item label {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
+/*image du pain*/
 .bread-box {
   padding: 10px;
   border-radius: 16px;
@@ -202,7 +206,7 @@ input[type="checkbox"] {
   /*"si .bread-item contient un radio coché, alors applique ce style à .bread-box"*/
   outline: 3px solid var(--red); /* outline se dessine par dessus l'objet sans modifier sa taille donc j'ai mis ça pour pas que ça boueg le layout. */
 }
-
+/*les trois options de pain*/
 .bread-options {
   display: flex;
   justify-content: space-evenly;
@@ -239,6 +243,7 @@ input[type="range"] {
 /* INPUTS TEXT */
 /* ========================= */
 
+/*applique meme style à tous les champs de texte et d'email*/
 input[type="text"],
 input[type="email"] {
   border: 2px solid var(--red);
@@ -249,6 +254,7 @@ input[type="email"] {
   max-width: 600px;
 }
 
+/*modifie apparence quand le champ est sélectionné*/
 input:focus {
   outline: none;
   border-color: var(--orange);
@@ -330,5 +336,3 @@ a {
   font-size: clamp(2rem, 8vw, 6rem);
   font-weight: 700;
 }
-
-/* à faire = mettre adresse une fois publiée, faire document pdf, voir si j'ai bien 5 trucs css*/
