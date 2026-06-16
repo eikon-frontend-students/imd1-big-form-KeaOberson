@@ -1,0 +1,338 @@
+/* racine du document. variables seront réutilisables dans tout le fichier.*/
+:root {
+  --brown: #502314;
+  --cream: #f4ebdc;
+  --yellow: #fbba00;
+  --orange: #ff8732;
+  --red: #d72300;
+  --white: #fff;
+
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+  --radius: 24px;
+  --radius-input: 30px;
+}
+
+/* RESET, pour supprimer marges par défaut du navigateur*/
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* définit taille de base des caractères. les unités rem seront calculé à partir de cette valeur.  */
+html {
+  font-size: 16px;
+}
+/* fonts*/
+@font-face {
+  font-family: "Flame";
+  src: url("../Burger%20King%20Flame/Flame-Regular.otf") format("opentype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Flame";
+  src: url("../Burger%20King%20Flame/Flame-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../sf-pro-display/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  font-weight: normal;
+}
+
+/* LAYOUT DU CONTAINER */
+body {
+  margin: clamp(1.5rem, 5vw, 5.6rem); /*rend les marges responsives*/
+}
+.container {
+  /* Centre tout le contenu de la page */
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  /* Espace entre les sections */
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+}
+/* HEADER */
+header {
+  display: flex;
+  padding: 60px;
+  flex-direction: column;
+  background: var(--brown);
+  border-radius: var(--radius);
+}
+
+h1 {
+  color: var(--cream);
+  font-family: Flame;
+  font-size: clamp(3.5rem, 8vw, 7.5rem);
+}
+
+.contest {
+  color: var(--yellow);
+  font-family: Flame;
+  font-size: clamp(2.5rem, 6vw, 6rem);
+}
+
+header p {
+  font-family: "SF Pro Display";
+  color: var(--cream);
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+  margin-top: clamp(0.8rem, 2vw, 1.25rem);
+}
+
+/* FORM */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  font-family: "SF Pro Display";
+  font-size: 24px;
+  color: var(--brown);
+  border-radius: var(--radius);
+}
+
+/* BARRE DE TITRE EN ORANGE*/
+.title {
+  background: var(--orange);
+  color: var(--red);
+  font-family: Flame;
+  font-size: clamp(2rem, 8vw, 6rem);
+  padding: 20px;
+  text-align: center;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+form > *:not(.title) {
+  /*tout le formulaire mais pas le titre a ce padding là*/
+  padding: 0 60px;
+}
+
+h3 {
+  color: var(--red);
+  font-family: Flame;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+}
+
+/* curseur*/
+.checkbox-item,
+.radio-group label,
+.bread-item label,
+input[type="range"] {
+  cursor: pointer;
+}
+/*QUESTIONS DU FORM*/
+
+.question {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+/*TITRE DES QUESTIONS*/
+.question-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.radio-group {
+  display: flex;
+  gap: clamp(0.8rem, 2vw, 1.25rem);
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+/*ce qui a écrit à coté du bouton radio*/
+.radio-group label {
+  flex: 1; /* "prend une part égale de l'espace dispo*/
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+input[type="radio"] {
+  accent-color: var(--red);
+  width: 18px;
+  height: 18px;
+} /*change couleur des boutons radios à cocher*/
+.checkbox-group {
+  display: flex;
+  gap: clamp(0.8rem, 2vw, 1.25rem);
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.checkbox-group label {
+  flex: 0 0 calc(20% - 16px); /* pour que les checkbox soient alignées avec celles au dessus*/
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+  min-width: 180px;
+}
+
+input[type="checkbox"] {
+  accent-color: var(--red);
+  width: 18px;
+  height: 18px;
+} /*change couleur des checkbox*/
+
+/* LAYOUT QUESTION 1 AVEC PAINS ET IMAGES*/
+/* carte de sélection d'un pain */
+.bread-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.2s;
+}
+
+.bread-item label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+/*image du pain*/
+.bread-box {
+  padding: 10px;
+  border-radius: 16px;
+  transition: 0.2s;
+  box-shadow: var(--shadow);
+}
+.bread-item:has(input[type="radio"]:checked) .bread-box {
+  /*"si .bread-item contient un radio coché, alors applique ce style à .bread-box"*/
+  outline: 3px solid var(--red); /* outline se dessine par dessus l'objet sans modifier sa taille donc j'ai mis ça pour pas que ça boueg le layout. */
+}
+/*les trois options de pain*/
+.bread-options {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.bread-item:hover .bread-box {
+  transform: scale(1.03);
+}
+img {
+  max-width: clamp(6rem, 10vw, 10.5rem);
+}
+.bread-item input[type="radio"] {
+  display: none;
+}
+/* ========================= */
+/* RANGE SLIDER */
+/* ========================= */
+
+input[type="range"] {
+  width: 50%;
+  accent-color: var(--red);
+}
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+
+  margin-top: 8px;
+  font-size: 14px;
+  color: var(--brown);
+}
+
+/* ========================= */
+/* INPUTS TEXT */
+/* ========================= */
+
+/*applique meme style à tous les champs de texte et d'email*/
+input[type="text"],
+input[type="email"] {
+  border: 2px solid var(--red);
+  border-radius: var(--radius-input);
+  padding: 12px 16px;
+  font-size: 16px;
+  width: 100%;
+  max-width: 600px;
+}
+
+/*modifie apparence quand le champ est sélectionné*/
+input:focus {
+  outline: none;
+  border-color: var(--orange);
+  box-shadow: 0 0 0 3px rgba(255, 135, 50, 0.2);
+}
+
+.submit-btn {
+  background: var(--red);
+  color: var(--cream);
+  box-shadow: var(--shadow);
+  font-family: Flame;
+  border-radius: 63px;
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  height: clamp(3.5rem, 8vw, 6.25rem);
+
+  margin: clamp(1.5rem, 4vw, 2.5rem) auto;
+
+  padding: 0 clamp(1.5rem, 3vw, 3rem);
+
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.submit-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+footer {
+  display: flex;
+  padding: 60px;
+  gap: 30px;
+  align-items: center;
+  flex-direction: column;
+  background: var(--brown);
+  border-radius: var(--radius);
+}
+
+footer h2 {
+  color: var(--cream);
+  font-family: Flame;
+  text-align: center;
+  font-weight: 400;
+}
+
+.links {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+a {
+  color: var(--yellow);
+  font-family: "SF Pro Display";
+}
+
+.success {
+  background-color: var(--brown);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  gap: 40px;
+}
+.merci {
+  color: var(--cream);
+  font-family: Flame;
+  font-size: clamp(2rem, 8vw, 6rem);
+  font-weight: 700;
+}
+.success > *:not(.merci) {
+  color: var(--yellow);
+  font-family: Flame;
+  font-size: clamp(2rem, 8vw, 6rem);
+  font-weight: 700;
+}
